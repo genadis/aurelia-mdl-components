@@ -31,3 +31,29 @@ export function configure(config) {
   );
 }
 
+export * from './components/mdl-badge';
+export * from './components/mdl-button';
+export * from './components/mdl-spinner';
+export * from './components/mdl-tooltip';
+export * from './components/decoration/mdl-b-color-class';
+export * from './components/decoration/mdl-color-class';
+export * from './components/decoration/mdl-color';
+export * from './components/decoration/mdl-flex-row-rtl';
+export * from './components/decoration/mdl-rtl';
+export * from './components/grid/mdl-cell';
+export * from './components/grid/mdl-grid';
+export * from './components/input/mdl-expandable';
+export * from './components/input/mdl-slider';
+export * from './components/input/mdl-textarea';
+export * from './components/input/mdl-textfield';
+export * from './components/layout/mdl-header';
+export * from './components/layout/mdl-header-row';
+export * from './components/layout/mdl-layout';
+export * from './components/navigation/mdl-link';
+export * from './components/navigation/mdl-nav';
+export * from './components/text/mdl-text';
+export * from './components/text/mdl-typography';
+export * from './components/toggle/mdl-checkbox';
+export * from './components/toggle/mdl-icon-toggle';
+export * from './components/toggle/mdl-radio';
+

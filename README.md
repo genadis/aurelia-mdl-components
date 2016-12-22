@@ -21,7 +21,7 @@ For example:
   <p mdl-text="title" mdl-typography="align:center; color-class:grey-600;">
       Below is a raised MDL button with ripple effect and primary color
   </p>
-  <mdl-button ripple.bind="true" type="raised" color-class="primary"></mdl-button>
+  <mdl-button ripple.bind="true" type="raised" color-class="primary" text="My Button"></mdl-button>
     
 </template>
 ```
@@ -52,12 +52,17 @@ Add package configuration to `aurelia.json`:
             "main": "index",
             "deps": ["encapsulated-mdl"]
           },
-           {
-             "name": "aurelia-mdl-components",
-             "path": "../node_modules/aurelia-mdl-components/dist/amd",
-             "main": "index",
-             "deps": ["aurelia-mdl"]
-           }
+          "extend",
+          {
+            "name": "aurelia-mdl-components",
+            "path": "../node_modules/aurelia-mdl-components/dist/amd",
+            "main": "index",
+            "deps": ["aurelia-mdl", "extend"],
+            "resources": [
+              "components/css/*.css",
+              "components/**/*.html"
+            ]
+          }
         ]
 ```
 Notice the resources in encapsulated-mdl, add your favorite style.
