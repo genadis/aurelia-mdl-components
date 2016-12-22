@@ -1,5 +1,5 @@
 <template bindable="click, ripple, type, colorClass, color, disabled, icon, iconClass, text, align, buttonStyle">
-  <require from="./decoration/mdl-color"></require>
+  <require from="../decoration/mdl-color"></require>
 
   <button ref="buttonElement" mdl="button" click.delegate="clickHandle($event)" mdl-color.bind="color">
     <slot name="start"></slot>
