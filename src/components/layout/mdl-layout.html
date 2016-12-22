@@ -1,24 +1,25 @@
-<template bindable="fixedHeader, transparentHeader, onReady, isSmallScreen, isDrawerOpen">
+<template bindable="fixedHeader, transparentHeader, fixedDrawer, onReady, isSmallScreen, isDrawerOpen">
   <require from="./mdl-header"></require>
 
   <div mdl="layout" ref="layoutElement">
 
     <div mdl-header="transparent.bind:transparentHeader">
-      <slot name="header"></slot>
+      <slot name="header-content"></slot>
     </div>
 
     <div class="mdl-layout__drawer" ref="drawerElement">
       <div class="mdl-layout__title">
         <slot name="drawer-title"></slot>
       </div>
-      <slot name="drawer"></slot>
+      <slot name="drawer-content"></slot>
     </div>
     <div class="mdl-layout__drawer-button">
       <slot name="drawer-icon"></slot>
     </div>
 
-    <slot name="content"></slot>
-
+    <div class="mdl-layout__content">
+      <slot name="content"></slot>
+    </div>
 
   </div>
 

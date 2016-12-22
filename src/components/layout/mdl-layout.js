@@ -6,8 +6,9 @@ export class MDLLayout {
 
   @bindable onReady;
   //view
-  @bindable fixedHeader;
-  @bindable transparentHeader;
+  @bindable fixedHeader = false;
+  @bindable transparentHeader = false;
+  @bindable fixedDrawer = false;
   @bindable({ defaultBindingMode: bindingMode.twoWay }) isSmallScreen = false;
   @bindable({ defaultBindingMode: bindingMode.twoWay }) isDrawerOpen = false;
 
@@ -26,6 +27,7 @@ export class MDLLayout {
   //lifecycle
   bind(bindingContext: Object, overrideContext: Object) {
     this.fixedHeaderChanged(this.fixedHeader);
+    this.fixedDrawerChanged(this.fixedDrawer);
   }
 
   unbind() {
@@ -66,7 +68,14 @@ export class MDLLayout {
     if (!this.layoutElement || (newValue === oldValue)) {
       return;
     }
-    this.layoutElement.classList.toggle('mdl-layout--fixed-header', this.isFixedHeader);
+    this.layoutElement.classList.toggle('mdl-layout--fixed-header', newValue);
+  }
+
+  fixedDrawerChanged(newValue, oldValue) {
+    if (!this.layoutElement || (newValue === oldValue)) {
+      return;
+    }
+    this.layoutElement.classList.toggle('mdl-layout--fixed-drawer', newValue);
   }
 
   layoutClassChange() {
