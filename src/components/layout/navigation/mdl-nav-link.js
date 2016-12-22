@@ -1,6 +1,6 @@
 import {customAttribute, inject, DOM} from 'aurelia-framework';
 
-@customAttribute('mdl-link')
+@customAttribute('mdl-nav-link')
 @inject(DOM.Element)
 export class MDLNavigationLink {
 

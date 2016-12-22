@@ -1,5 +1,5 @@
 <template bindable="placeholder, value, type, focus, focusChange, float, align, alignPlaceholder, dir, disabled, rtl, errors">
-  <require from="../../components/decoration/mdl-rtl"></require>
+  <require from="../decoration/mdl-rtl"></require>
 
   <div mdl="textfield" class="${doFloat ? 'mdl-textfield--floating-label' : ''}" ref="textfieldElement">
     <input class="mdl-textfield__input" type="${type}" id="mdl-textfield-${id & oneTime}"
