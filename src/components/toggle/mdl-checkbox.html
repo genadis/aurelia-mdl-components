@@ -1,0 +1,8 @@
+<template bindable="checked, ripple, text">
+
+  <label mdl="checkbox" for="mdl-checkbox-${id & oneTime}" ref="labelElement">
+    <input class="mdl-checkbox__input" ref="inputElement" checked.two-way="checked"
+           type="checkbox" id="mdl-checkbox-${id & oneTime}">
+    <span class="mdl-checkbox__label">${text}</span>
+  </label>
+</template>

@@ -1,0 +1,11 @@
+<template bindable="checked, iconClass, icon, ripple, disabled">
+  <label mdl="icon-toggle" for="mdl-input-${id & oneTime}" ref="labelElement">
+    <input checked.two-way="checked" type="checkbox" disabled.two-way="disabled"
+           id="mdl-input-${id & oneTime}" class="mdl-icon-toggle__input" ref="inputElement">
+    <slot name="start"></slot>
+    <i class="mdl-icon-toggle__label ${iconClass}" ref="iconElement">
+      ${icon}
+    </i>
+    <slot name="end"></slot>
+  </label>
+</template>

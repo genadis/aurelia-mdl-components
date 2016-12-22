@@ -1,0 +1,10 @@
+<template bindable="placeholder, value, type, focus, focusChange, float, align, alignPlaceholder, dir, disabled, rtl, errors">
+  <require from="../../components/decoration/mdl-rtl"></require>
+
+  <div mdl="textfield" class="${doFloat ? 'mdl-textfield--floating-label' : ''}" ref="textfieldElement">
+    <input class="mdl-textfield__input" type="${type}" id="mdl-textfield-${id & oneTime}"
+           value.bind="value" focus.two-way="focus" ref="inputElement" disabled.bind="disabled" mdl-rtl.bind="rtl" blur.trigger="onBlur()">
+    <label class="mdl-textfield__label" for="mdl-textfield-${id & oneTime}" ref="labelElement" mdl-rtl.bind="rtl">${placeholder}</label>
+    <span class="mdl-textfield__error">${errorMsg}</span>
+  </div>
+</template>

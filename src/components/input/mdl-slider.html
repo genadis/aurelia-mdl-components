@@ -1,0 +1,10 @@
+<template bindable="min, max, value, step, focus, focusChange, disabled">
+
+  <div class="mdl-slider--container">
+    <slot name="start"></slot>
+    <input mdl="slider" ref="inputElement" min.bind="min" max.bind="max" step.bind="step" value.two-way="inputValue"
+           focus.bind="focus" disabled.bind="disabled" tabindex="0" type="range">
+    <slot name="end"></slot>
+  </div>
+
+</template>

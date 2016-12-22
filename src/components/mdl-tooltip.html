@@ -1,0 +1,9 @@
+<template bindable="for, text, isLarge, position">
+
+  <label mdl="tooltip" class="${classes}" data-mdl-for="${for}">
+    <slot name="start"></slot>
+    ${text}
+    <slot name="end"></slot>
+  </label>
+
+</template>

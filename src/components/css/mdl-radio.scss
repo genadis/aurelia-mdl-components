@@ -1,0 +1,27 @@
+.mdl-radio--container {
+  .mdl-radio__outer-circle {
+    z-index: 1;
+  }
+}
+.mdl-radio--container.mdl-rtl {
+  .mdl-radio {
+    padding-left: 0;
+    padding-right: 24px;
+    .mdl-radio__outer-circle {
+      left: auto;
+      right: 0;
+    }
+    .mdl-radio__inner-circle {
+      left: auto;
+      right: 4px;
+    }
+    .mdl-radio__ripple-container {
+      left: auto;
+      right: -13px;
+      .mdl-ripple {
+        left: auto;
+        right: 0;
+      }
+    }
+  }
+}

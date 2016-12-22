@@ -1,0 +1,14 @@
+jspm_packages
+bower_components
+.idea
+build
+src
+test
+doc
+.editorconfig
+.eslintrc
+.gitattributes
+config.js
+gulpfile.js
+karma.conf.js
+jspm_packages

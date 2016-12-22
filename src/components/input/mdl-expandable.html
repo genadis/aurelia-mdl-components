@@ -1,0 +1,12 @@
+<template bindable="value, onKeyUp, focus, onFocusChanged, icon, iconClass, align, dir, disabled, placeholder">
+  <div mdl="textfield" class="mdl-textfield--expandable" ref="expandableElement">
+    <button mdl="button" class="mdl-button--icon" for="mdl-expandable-${id & oneTime}" ref="buttonElement">
+      <i class="${iconClass}">${icon}</i>
+    </button>
+    <div class="mdl-textfield__expandable-holder">
+      <input class="mdl-textfield__input" type="text" id="mdl-expandable-${id & oneTime}" ref="inputElement"
+             focus.two-way="focus" value.bind="value" keyup.delegate="keyUp($event)">
+      <label class="mdl-textfield__label" for="mdl-expandable-${id & oneTime}">${placeholder}</label>
+    </div>
+  </div>
+</template>

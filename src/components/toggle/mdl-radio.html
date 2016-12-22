@@ -1,0 +1,13 @@
+<template bindable="options, ripple, colorClass, selection, rtl">
+  <require from="../css/mdl-radio.css"></require>
+
+  <div class="mdl-radio--container ${isRTL ? 'mdl-rtl' : '' & oneTime & signal:'mdl-comp-radio'}">
+    <div class="mdl-radio--option" repeat.for="option of options & oneTime & signal:'mdl-comp-radio'">
+      <label mdl="radio" ref="radioElements[$index]"
+             class="${hasRipple ? 'mdl-js-ripple-effect' : '' & oneTime & signal:'mdl-comp-radio'}">
+        <input class="mdl-radio__button" ref="buttonElements[$index]" type="radio" name="radio-${id & oneTime}">
+        <span class="mdl-radio__label">${option & oneTime & signal:'mdl-comp-radio'}</span>
+      </label>
+    </div>
+  </div>
+</template>
