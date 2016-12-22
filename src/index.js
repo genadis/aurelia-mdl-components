@@ -2,10 +2,10 @@
 export function configure(config) {
   config.plugin('aurelia-mdl');
   config.globalResources([
-    './components/mdl-badge',
-    './components/mdl-button',
-    './components/mdl-spinner',
-    './components/mdl-tooltip',
+    './components/badges/mdl-badge',
+    './components/buttons/mdl-button',
+    './components/loading/mdl-spinner',
+    './components/tooltips/mdl-tooltip',
     './components/decoration/mdl-b-color-class',
     './components/decoration/mdl-color-class',
     './components/decoration/mdl-color',
@@ -31,10 +31,10 @@ export function configure(config) {
   );
 }
 
-export * from './components/mdl-badge';
-export * from './components/mdl-button';
-export * from './components/mdl-spinner';
-export * from './components/mdl-tooltip';
+export * from './components/badges/mdl-badge';
+export * from './components/buttons/mdl-button';
+export * from './components/loading/mdl-spinner';
+export * from './components/tooltips/mdl-tooltip';
 export * from './components/decoration/mdl-b-color-class';
 export * from './components/decoration/mdl-color-class';
 export * from './components/decoration/mdl-color';
