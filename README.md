@@ -68,9 +68,9 @@ In your app.hml (or wherever):
 ```
 And in [manual bootstrapping](http://aurelia.io/hub.html#/doc/article/aurelia/framework/latest/app-configuration-and-startup/4):
 ```
-aurelia.use.plugin('aurelia-mdl');
 aurelia.use.plugin('aurelia-mdl-components');
 ```
+> No need to include `aurelia.use.plugin('aurelia-mdl');` as it's already included by aurelia-mdl-components.
 
 ### JSPM
 
@@ -84,18 +84,17 @@ Make sure you use [manual bootstrapping](http://aurelia.io/hub.html#/doc/article
 
 Update  your bootstrapping:
 
-  ```javascript
+```js
 export function configure(aurelia) {
   aurelia.use
-    .standardConfiguration()
-    .developmentLogging();
+    .standardConfiguration();
 
-  aurelia.use.plugin('aurelia-mdl');
   aurelia.use.plugin('aurelia-mdl-components');
 
   aurelia.start().then(a => a.setRoot());
 }
-   ```
+```
+> No need to include `aurelia.use.plugin('aurelia-mdl');` as it's already included by aurelia-mdl-components.
 
 Include material design css:
 ```html
