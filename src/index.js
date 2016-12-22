@@ -45,7 +45,7 @@ export * from './components/layout/mdl-layout';
 export * from './components/layout/grid/mdl-cell';
 export * from './components/layout/grid/mdl-grid';
 export * from './components/layout/navigation/mdl-nav-link';
-export * from './components/layout/navigation/mdl-nav',
+export * from './components/layout/navigation/mdl-nav';
 export * from './components/sliders/mdl-slider';
 export * from './components/text/mdl-text';
 export * from './components/text/mdl-typography';
