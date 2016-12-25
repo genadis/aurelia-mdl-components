@@ -9,6 +9,7 @@ export class MDLCheckbox {
   @bindable({ defaultBindingMode: bindingMode.twoWay }) disabled = false;
   @bindable inputElement;
   @bindable ripple;
+  @bindable text;
 
   //view
   labelElement;
