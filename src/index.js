@@ -4,7 +4,14 @@ export function configure(config) {
   config.globalResources([
     './components/badges/mdl-badge',
     './components/buttons/mdl-button',
-    './components/loading/mdl-spinner',
+    './components/cards/mdl-card',
+    './components/cards/mdl-card-actions',
+    './components/cards/mdl-card-media',
+    './components/cards/mdl-card-menu',
+    './components/cards/mdl-card-subtitle-text',
+    './components/cards/mdl-card-supporting-text',
+    './components/cards/mdl-card-title',
+    './components/cards/mdl-card-title-text',
     './components/decoration/mdl-b-color-class',
     './components/decoration/mdl-color-class',
     './components/decoration/mdl-color',
@@ -18,6 +25,7 @@ export function configure(config) {
     './components/layout/navigation/mdl-nav-link',
     './components/layout/navigation/mdl-nav',
     './components/sliders/mdl-slider',
+    './components/loading/mdl-spinner',
     './components/text/mdl-text',
     './components/text/mdl-typography',
     './components/text-fields/mdl-expandable',
@@ -33,7 +41,14 @@ export function configure(config) {
 
 export * from './components/badges/mdl-badge';
 export * from './components/buttons/mdl-button';
-export * from './components/loading/mdl-spinner';
+export * from './components/cards/mdl-card';
+export * from './components/cards/mdl-card-actions';
+export * from './components/cards/mdl-card-media';
+export * from './components/cards/mdl-card-menu';
+export * from './components/cards/mdl-card-subtitle-text';
+export * from './components/cards/mdl-card-supporting-text';
+export * from './components/cards/mdl-card-title';
+export * from './components/cards/mdl-card-title-text';
 export * from './components/decoration/mdl-b-color-class';
 export * from './components/decoration/mdl-color-class';
 export * from './components/decoration/mdl-color';
@@ -47,6 +62,7 @@ export * from './components/layout/grid/mdl-grid';
 export * from './components/layout/navigation/mdl-nav-link';
 export * from './components/layout/navigation/mdl-nav';
 export * from './components/sliders/mdl-slider';
+export * from './components/loading/mdl-spinner';
 export * from './components/text/mdl-text';
 export * from './components/text/mdl-typography';
 export * from './components/text-fields/mdl-expandable';
