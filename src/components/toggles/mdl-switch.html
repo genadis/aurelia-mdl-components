@@ -1,0 +1,8 @@
+<template bindable="checked, ripple, text">
+
+  <label mdl="switch" for="mdl-switch-${id & oneTime}" ref="labelElement">
+    <input class="mdl-switch__input" ref="inputElement" checked.two-way="checked"
+           type="checkbox" id="mdl-switch-${id & oneTime}">
+    <span class="mdl-switch__label">${text}</span>
+  </label>
+</template>

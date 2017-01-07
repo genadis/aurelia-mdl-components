@@ -34,6 +34,7 @@ export function configure(config) {
     './components/toggles/mdl-checkbox',
     './components/toggles/mdl-icon-toggle',
     './components/toggles/mdl-radio',
+    './components/toggles/mdl-switch',
     './components/tooltips/mdl-tooltip',
     ]
   );
@@ -71,5 +72,6 @@ export * from './components/text-fields/mdl-textfield';
 export * from './components/toggles/mdl-checkbox';
 export * from './components/toggles/mdl-icon-toggle';
 export * from './components/toggles/mdl-radio';
+export * from './components/toggles/mdl-switch';
 export * from './components/tooltips/mdl-tooltip';
 
