@@ -1,6 +1,6 @@
 {
   "name": "aurelia-mdl-components",
-  "version": "0.1.7",
+  "version": "0.1.9",
   "description": "Aurelia MDL components based on genadis/aureli-mdl.",
   "keywords": [
     "aurelia",
@@ -71,6 +71,7 @@
       "dist": "dist/commonjs"
     },
     "dependencies": {
+      "aurelia-framework": "^1.0.8",
       "aurelia-mdl": "^0.4.1",
       "extend": "^3.0.0"
     },
