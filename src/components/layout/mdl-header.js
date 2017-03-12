@@ -27,6 +27,11 @@ export class MDLLayoutHeader {
     if (newValue === oldValue) {
       return;
     }
-    this.element.classList.toggle('mdl-layout__header--transparent', this.isTransparent);
+
+    if ((newValue === true) || (newValue === 'true')) {
+      this.element.classList.add('mdl-layout__header--transparent');
+    } else {
+      this.element.classList.remove('mdl-layout__header--transparent');
+    }
   }
 }

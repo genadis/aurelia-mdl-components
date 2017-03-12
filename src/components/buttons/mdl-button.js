@@ -33,7 +33,11 @@ export class MDLButton {
 
   rippleChanged(newValue, oldValue) {
     if (this.buttonElement) {
-      this.buttonElement.classList.toggle('mdl-js-ripple-effect', (newValue === 'true') || (newValue === true));
+      if ((newValue === true) || (newValue === 'true')) {
+        this.buttonElement.classList.add('mdl-js-ripple-effect');
+      } else {
+        this.element.classList.remove('mdl-js-ripple-effect');
+      }
     }
   }
 

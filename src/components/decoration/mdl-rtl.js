@@ -21,10 +21,12 @@ export class MDLRTL {
     if (this.rtl) {
       this.element.style.direction = 'rtl';
       this.element.style.textAlign = 'right';
+      this.element.classList.add('mdl-rtl');
     } else {
       this.element.style.direction = '';
       this.element.style.textAlign = '';
+      this.element.classList.remove('mdl-rtl');
     }
-    this.element.classList.toggle('mdl-rtl', this.rtl);
+
   }
 }

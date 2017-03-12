@@ -20,9 +20,10 @@ export class MDLFlexRowRTL {
   _apply() {
     if (this.rtl) {
       this.element.style.flexDirection = 'row-reverse';
+      this.element.classList.add('mdl-rtl');
     } else {
       this.element.style.flexDirection = '';
+      this.element.classList.remove('mdl-rtl');
     }
-    this.element.classList.toggle('mdl-rtl', this.rtl);
   }
 }

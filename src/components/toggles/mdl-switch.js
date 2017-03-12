@@ -26,8 +26,13 @@ export class MDLSwitch {
   }
 
   rippleChanged(newValue, oldValue) {
-    if (this.labelElement) {
-      this.labelElement.classList.toggle('mdl-js-ripple-effect', (newValue === true) || (newValue === 'true'));
+    if (!this.labelElement) {
+      return;
+    }
+    if ((newValue === true) || (newValue === 'true')) {
+      this.labelElement.classList.add('mdl-js-ripple-effect');
+    } else {
+      this.labelElement.classList.remove('mdl-js-ripple-effect');
     }
   }
 

@@ -122,9 +122,12 @@ export class MDLTextfield {
       }
       const hasErr = (this.errors.length !== 0);
 
-      this.textfieldElement.classList.toggle('is-invalid', hasErr);
       if (hasErr) {
+        this.textfieldElement.classList.add('is-invalid');
         this.errorMsg = this.errors.join(' ');
+      } else {
+        this.textfieldElement.classList.remove('is-invalid');
+        this.errorMsg = '';
       }
 
       this.textfieldElement.style.marginBottom = `${hasErr ? 10 + 20 * Math.max(0, this.errors.length - 1) : 0}px`;

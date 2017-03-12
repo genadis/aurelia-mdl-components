@@ -29,7 +29,7 @@ export class MDLTextTypography {
 
   alignChanged(newValue, oldValue) {
     if ((newValue === 'left') || (newValue === 'right') || (newValue === 'center')) {
-      this.element.classList.toggle(`mdl-typography--text-${newValue}`, true);
+      this.element.classList.add(`mdl-typography--text-${newValue}`);
     }
     if (oldValue) {
       this.element.classList.remove(`mdl-typography--text-${oldValue}`);
@@ -44,7 +44,7 @@ export class MDLTextTypography {
 
   colorClassChanged(newValue, oldValue) {
     if (newValue) {
-      this.element.classList.toggle(`mdl-color-text--${newValue}`, true);
+      this.element.classList.add(`mdl-color-text--${newValue}`);
     }
     if (oldValue) {
       this.element.classList.remove(`mdl-color-text--${oldValue}`);
@@ -52,23 +52,43 @@ export class MDLTextTypography {
   }
 
   capitalizeChanged(newValue, oldValue) {
-    this.element.classList.toggle('mdl-typography--text-capitalize', ((newValue === true) || (newValue === 'true')));
+    if ((newValue === true) || (newValue === 'true')) {
+      this.element.classList.add('mdl-typography--text-capitalize');
+    } else {
+      this.element.classList.remove('mdl-typography--text-capitalize');
+    }
   }
 
   lowercaseChanged(newValue, oldValue) {
-    this.element.classList.toggle('mdl-typography--text-lowercase', ((newValue === true) || (newValue === 'true')));
+    if ((newValue === true) || (newValue === 'true')) {
+      this.element.classList.add('mdl-typography--text-lowercase');
+    } else {
+      this.element.classList.remove('mdl-typography--text-lowercase');
+    }
   }
 
   justifyChanged(newValue, oldValue) {
-    this.element.classList.toggle('mdl-typography--text-justify', ((newValue === true) || (newValue === 'true')));
+    if ((newValue === true) || (newValue === 'true')) {
+      this.element.classList.add('mdl-typography--text-justify');
+    } else {
+      this.element.classList.remove('mdl-typography--text-justify');
+    }
   }
 
   nowrapChanged(newValue, oldValue) {
-    this.element.classList.toggle('mdl-typography--text-nowrap', ((newValue === true) || (newValue === 'true')));
+    if ((newValue === true) || (newValue === 'true')) {
+      this.element.classList.add('mdl-typography--text-nowrap');
+    } else {
+      this.element.classList.remove('mdl-typography--text-nowrap');
+    }
   }
 
   uppercaseChanged(newValue, oldValue) {
-    this.element.classList.toggle('mdl-typography--text-uppercase', ((newValue === true) || (newValue === 'true')));
+    if ((newValue === true) || (newValue === 'true')) {
+      this.element.classList.add('mdl-typography--text-uppercase');
+    } else {
+      this.element.classList.remove('mdl-typography--text-uppercase');
+    }
   }
 
 }

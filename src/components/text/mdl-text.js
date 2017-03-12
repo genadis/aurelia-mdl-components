@@ -17,7 +17,7 @@ export class MDLBodyText {
 
   valueChanged(newValue, oldValue){
     if (this.styles.indexOf(newValue) !== -1) {
-      this.element.classList.toggle(`mdl-typography--${newValue}`, true);
+      this.element.classList.add(`mdl-typography--${newValue}`);
     }
     if (oldValue) {
       this.element.classList.remove(`mdl-typography--${oldValue}`);

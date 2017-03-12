@@ -8,7 +8,7 @@ export class MDLBColorClass {
   }
 
   valueChanged(newValue, oldValue){
-    this.element.classList.toggle(`mdl-color--${newValue}`, true);
+    this.element.classList.add(`mdl-color--${newValue}`);
     if (oldValue) {
       this.element.classList.remove(`mdl-color--${oldValue}`);
     }

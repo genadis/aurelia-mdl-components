@@ -14,7 +14,7 @@ export class MDLBadge {
 
   bind(bindingContext: Object, overrideContext: Object) {
     if (this.data) {
-      this.element.classList.toggle('mdl-badge', true);
+      this.element.classList.add('mdl-badge');
       this.element.setAttribute('data-badge', this.data);
     }
     this.noBackgroundChanged(this.noBackground);
@@ -31,15 +31,23 @@ export class MDLBadge {
     if (newValue === oldValue) {
       return;
     }
-    this.element.classList.toggle('mdl-badge', true);
+    this.element.classList.add('mdl-badge');
     this.element.setAttribute('data-badge', newValue);
   }
 
   noBackgroundChanged(newValue, oldValue) {
-    this.element.classList.toggle('mdl-badge--no-background', ((newValue === true) || (newValue === 'true')));
+    if ((newValue === true) || (newValue === 'true')) {
+      this.element.classList.add('mdl-badge--no-background');
+    } else {
+      this.element.classList.remove('mdl-badge--no-background');
+    }
   }
 
   overlapChanged(newValue, oldValue) {
-    this.element.classList.toggle('mdl-badge--overlap', ((newValue === true) || (newValue === 'true')));
+    if ((newValue === true) || (newValue === 'true')) {
+      this.element.classList.add('mdl-badge--overlap');
+    } else {
+      this.element.classList.remove('mdl-badge--overlap');
+    }
   }
 }

@@ -68,14 +68,22 @@ export class MDLLayout {
     if (!this.layoutElement || (newValue === oldValue)) {
       return;
     }
-    this.layoutElement.classList.toggle('mdl-layout--fixed-header', newValue);
+    if ((newValue ===  true) || (newValue === 'true')) {
+      this.layoutElement.classList.add('mdl-layout--fixed-header');
+    } else {
+      this.layoutElement.classList.remove('mdl-layout--fixed-header');
+    }
   }
 
   fixedDrawerChanged(newValue, oldValue) {
     if (!this.layoutElement || (newValue === oldValue)) {
       return;
     }
-    this.layoutElement.classList.toggle('mdl-layout--fixed-drawer', newValue);
+    if ((newValue ===  true) || (newValue === 'true')) {
+      this.layoutElement.classList.add('mdl-layout--fixed-drawer');
+    } else {
+      this.layoutElement.classList.remove('mdl-layout--fixed-drawer');
+    }
   }
 
   layoutClassChange() {
